@@ -16,7 +16,7 @@ function createsNote() {
   var notelist = new NoteList();
   var text = 'Favourite drink: seltzer';
   var noteText = notelist.addNote(text);
-  assert.isTrue(notelist.showList()[0] === text);
+  assert.isTrue(notelist.showList()[0].receivesText() === text);
   assert.isTrue(notelist.showList().length === 1);
 }
 
