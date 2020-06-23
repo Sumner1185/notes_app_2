@@ -6,13 +6,20 @@ function arraySetup() {
   assert.isTrue(notelist._list.length === 0);
 }
 
+function showListTest() {
+  var notelist;
+  notelist = new NoteList();
+  assert.isTrue(Array.isArray(notelist.showList()));
+}
+
 function createsNote() {
   var notelist = new NoteList();
   var text = 'Favourite drink: seltzer';
   var noteText = notelist.addNote(text);
-  assert.isTrue(notelist._list[0] === text);
-  assert.isTrue(notelist._list.length === 1);
+  assert.isTrue(notelist.showList()[0] === text);
+  assert.isTrue(notelist.showList().length === 1);
 }
 
 arraySetup();
+showListTest();
 createsNote();
