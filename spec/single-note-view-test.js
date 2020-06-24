@@ -1,5 +1,3 @@
-const { NoteController } = require("../src/note-controller");
-
 function returnsAStringOfHTML() {
   const note = new Note("Favourite drink: seltzer");
   const singleNote = new SingleNoteView(note);
