@@ -1,7 +1,16 @@
-var element = document.getElementById('app')
+(function(exports) {
 
-const content = element.innerHTML;
+  function NoteController(noteList = new NoteList) {
+    this.noteList = noteList;
+    this.noteList.addNote("Favourite drink: seltzer");
+    this.noteListView = new NoteListView(this.noteList);
+  };
 
-element.innerHTML = "howdy"
+  NoteController.prototype.insertHTML = function() {
+    var element = document.getElementById('app');
 
-//var elem = document.getElementById('para');
+    element.innerHTML = this.noteListView.returnHTML();
+  };
+
+  exports.NoteController = NoteController;
+})(this);
