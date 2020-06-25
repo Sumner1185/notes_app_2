@@ -17,7 +17,7 @@ function createsNote() {
   var text = 'Favourite drink: seltzer';
   notelist.addNote(text);
   assert.isTrue(notelist.showList()[0].receivesText() === text);
-  assert.isTrue(notelist.showList()[0].returnId() === 0);
+  assert.isTrue(notelist.showList()[0].id === 0);
   assert.isTrue(notelist.showList().length === 1);
 }
 
@@ -25,7 +25,7 @@ function checkSecondId() {
   var notelist = new NoteList();
   notelist.addNote("Hi");
   notelist.addNote("Hey");
-  assert.isTrue(notelist.showList()[1].returnId() === 1);
+  assert.isTrue(notelist.showList()[1].id === 1);
 }
 
 checkSecondId();

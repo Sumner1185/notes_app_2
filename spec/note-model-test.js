@@ -10,7 +10,5 @@ function returnsText() {
   assert.isTrue(text === 'test note');
 }
 
-
-
 storesText();
 returnsText();
