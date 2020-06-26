@@ -1,7 +1,6 @@
 (function (exports) {
-  function NoteController(noteList = new NoteList()) {
+  function NoteController(noteList) {
     this.noteList = noteList;
-    this.noteList.addNote("Favourite drink: seltzer");
     this.noteListView = new NoteListView(this.noteList);
   }
 
@@ -14,8 +13,6 @@
   };
 
   NoteController.prototype.returnIdFromURL = function () {
-    console.log(window.location.hash)
-    console.log(window.location.hash.split("/")[1])
     return parseInt(window.location.hash.split("/")[1]);
   };
 

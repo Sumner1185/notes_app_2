@@ -4,5 +4,13 @@ function returnIdFromURLHash() {
   assert.isTrue(noteController.returnIdFromURL(url) === 0)
 };
 
-returnIdFromURLHash();
+function returnNoteBasedOnId() {
+  var noteList = new NoteList();
+  noteList.addNote("Test");
+  var noteController = new NoteController(noteList);
 
+  assert.isTrue(noteController.returnSingleNote(0) instanceof Note())
+};
+
+returnIdFromURLHash();
+returnNoteBasedOnId();
