@@ -1,14 +1,19 @@
 <body onhashchange="noteController.listener()">
-<div id='app'> Hello </div>
+  <form id="text" action="#newnote" method="POST">
+    <textarea cols="50" rows="10" placeholder="New Note"></textarea>
+    <input type="submit" value="Add new note"></input>
+  </form>
 
-<script src="./src/note-controller.js"></script>
-<script src="./src/notelist-model.js"></script>
-<script src="./src/notelist-view.js"></script>
-<script src="./src/note-model.js"></script>
-<script src="./src/single-note-view.js"></script>
+  <div id="app">Hello</div>
 
-<script>
-  let noteController = new NoteController();
-  noteController.insertHTML();
-</script>
+  <script src="./src/note-controller.js"></script>
+  <script src="./src/notelist-model.js"></script>
+  <script src="./src/notelist-view.js"></script>
+  <script src="./src/note-model.js"></script>
+  <script src="./src/single-note-view.js"></script>
+
+  <script>
+    let noteController = new NoteController();
+    noteController.insertHTML();
+  </script>
 </body>

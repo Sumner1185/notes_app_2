@@ -1,9 +1,9 @@
 (function (exports) {
   function NoteController(noteList) {
     this.noteList = new NoteList();
-    this.noteList.addNote("Test0owuiehowheoiwheoiuwefwerfeifjho23", 0);
-    this.noteList.addNote("Test1powiehjfowuhefouwhefouhwef", 1);
-    this.noteList.addNote("Testpiwjefoiwoeih2oiefho2iehf2", 2);
+    this.noteList.addNote("Test for making sure everything works", 0);
+    this.noteList.addNote("Test for making sure everything works again", 1);
+    this.noteList.addNote("Test for making sure everything works once more", 2);
     this.noteListView = new NoteListView(this.noteList);
   }
 
@@ -32,7 +32,7 @@
   };
 
   NoteController.prototype.renderSingleNoteHtml = function (html) {
-    document.getElementById("app").innerHTML = html
+    document.getElementById("app").innerHTML = html;
   };
 
   exports.NoteController = NoteController;
