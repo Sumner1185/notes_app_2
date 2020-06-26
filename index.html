@@ -1,7 +1,14 @@
-
+<body onhashchange="noteController.listener()">
 <div id='app'> Hello </div>
 
-<script src="./note-controller.js"></script>
-<script src="./notelist-model.js"></script>
-<script src="./notelist-view.js"></script>
-<script src="./note-model.js"></script>
+<script src="./src/note-controller.js"></script>
+<script src="./src/notelist-model.js"></script>
+<script src="./src/notelist-view.js"></script>
+<script src="./src/note-model.js"></script>
+<script src="./src/single-note-view.js"></script>
+
+<script>
+  let noteController = new NoteController();
+  noteController.insertHTML();
+</script>
+</body>
