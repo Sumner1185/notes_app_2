@@ -1,7 +1,7 @@
 <body onhashchange="noteController.listener()">
   <form id="text" action="#newnote" method="POST">
     <textarea cols="50" rows="10" placeholder="New Note"></textarea>
-    <input type="submit" value="Add new note"></input>
+    <input onclick='noteController.submitListen()' type="submit" value="Add new note"></input>
   </form>
 
   <div id="app">Hello</div>

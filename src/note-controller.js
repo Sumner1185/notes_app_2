@@ -35,5 +35,12 @@
     document.getElementById("app").innerHTML = html;
   };
 
+  NoteController.prototype.submitListen = function () {
+    document.addEventListener("submit", function (object) {
+      object.preventDefault();
+      console.log(object);
+    });
+  };
+
   exports.NoteController = NoteController;
 })(this);
