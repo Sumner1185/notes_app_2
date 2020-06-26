@@ -4,12 +4,12 @@
     this.id = 0;
   }
 
-  NoteList.prototype.showList = function() {
-    return this._list
-  }
+  NoteList.prototype.showList = function () {
+    return this._list;
+  };
 
-  NoteList.prototype.showID = function() {
-    return this.id
+  NoteList.prototype.showID = function () {
+    return this.id;
   };
 
   NoteList.prototype.addNote = function (string, id) {
@@ -18,8 +18,15 @@
     this.incrementId();
   };
 
-  NoteList.prototype.incrementId = function() {
-    this.id++
+  NoteList.prototype.incrementId = function () {
+    this.id++;
+  };
+
+  NoteList.prototype.returnNoteById = function (id) {
+    let result = this._list.filter((note) => {
+      return note.returnId() == id;
+    });
+    return result[0];
   };
 
   exports.NoteList = NoteList;
