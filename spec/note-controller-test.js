@@ -13,5 +13,14 @@ function returnNoteBasedOnId() {
   assert.isTrue(noteController.returnSingleNote(0) instanceof Note);
 }
 
+function returnCorrectHtmlFromPassedInNote() {
+  var noteController = new NoteController();
+  let note = new Note("this is a test", 5);
+  assert.isTrue(
+    noteController.returnSingleNoteHtml(note) === "<div>this is a test</div>"
+  );
+}
+
 returnIdFromURLHash();
 returnNoteBasedOnId();
+returnCorrectHtmlFromPassedInNote();

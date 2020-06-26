@@ -21,5 +21,10 @@
     return note;
   };
 
+  NoteController.prototype.returnSingleNoteHtml = function (note) {
+    let singleNote = new SingleNoteView(note);
+    return singleNote.returnHtmlString();
+  };
+
   exports.NoteController = NoteController;
 })(this);
